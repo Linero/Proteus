@@ -1,5 +1,3 @@
-bin/
-bin-int/
 [submodule "Proteus/vendor/spdlog"]
 	path = Proteus/vendor/spdlog
 	url = https://github.com/gabime/spdlog
