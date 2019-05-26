@@ -1,0 +1,15 @@
+﻿  Proteus_pch.cpp
+  Application.cpp
+C:\Users\mateu\source\repos\Proteus\Proteus\src\Proteus\Events\MouseEvent.h(50): warning C4244: "return": konwersja z "const int" do "float", możliwa utrata danych
+C:\Users\mateu\source\repos\Proteus\Proteus\src\Proteus\Log.h(10): warning C4251: "Proteus::Log::s_CoreLogger": class "std::shared_ptr<spdlog::logger>" wymaga posiadania użycia interfejsu biblioteki dll przez klientów class "Proteus::Log"
+  C:\Users\mateu\source\repos\Proteus\Proteus\vendor\spdlog\include\spdlog\logger.h(158): note: zobacz deklarację „std::shared_ptr<spdlog::logger>”
+C:\Users\mateu\source\repos\Proteus\Proteus\src\Proteus\Log.h(11): warning C4251: "Proteus::Log::s_ClientLogger": class "std::shared_ptr<spdlog::logger>" wymaga posiadania użycia interfejsu biblioteki dll przez klientów class "Proteus::Log"
+  C:\Users\mateu\source\repos\Proteus\Proteus\vendor\spdlog\include\spdlog\logger.h(158): note: zobacz deklarację „std::shared_ptr<spdlog::logger>”
+  Log.cpp
+C:\Users\mateu\source\repos\Proteus\Proteus\src\Proteus\Log.h(10): warning C4251: "Proteus::Log::s_CoreLogger": class "std::shared_ptr<spdlog::logger>" wymaga posiadania użycia interfejsu biblioteki dll przez klientów class "Proteus::Log"
+  C:\Users\mateu\source\repos\Proteus\Proteus\vendor\spdlog\include\spdlog\logger.h(158): note: zobacz deklarację „std::shared_ptr<spdlog::logger>”
+C:\Users\mateu\source\repos\Proteus\Proteus\src\Proteus\Log.h(11): warning C4251: "Proteus::Log::s_ClientLogger": class "std::shared_ptr<spdlog::logger>" wymaga posiadania użycia interfejsu biblioteki dll przez klientów class "Proteus::Log"
+  C:\Users\mateu\source\repos\Proteus\Proteus\vendor\spdlog\include\spdlog\logger.h(158): note: zobacz deklarację „std::shared_ptr<spdlog::logger>”
+  Generowanie kodu...
+     Trwa tworzenie biblioteki ..\bin\Debug-windows-x86_64\Proteus\Proteus.lib i obiektu ..\bin\Debug-windows-x86_64\Proteus\Proteus.exp
+  Proteus.vcxproj -> C:\Users\mateu\source\repos\Proteus\Proteus\..\bin\Debug-windows-x86_64\Proteus\Proteus.dll

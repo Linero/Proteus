@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Proteus">
+      <UniqueIdentifier>{77AAF823-E389-77BF-ECA1-02965800DE20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Proteus\Events">
+      <UniqueIdentifier>{7B0A6552-67D8-5858-506C-C97E3CD934BD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Proteus.h" />
+    <ClInclude Include="src\Proteus\Application.h">
+      <Filter>Proteus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Proteus\Core.h">
+      <Filter>Proteus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Proteus\EntryPoint.h">
+      <Filter>Proteus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Proteus\Events\ApplicationEvent.h">
+      <Filter>Proteus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Proteus\Events\Event.h">
+      <Filter>Proteus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Proteus\Events\KeyEvent.h">
+      <Filter>Proteus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Proteus\Events\MouseEvent.h">
+      <Filter>Proteus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Proteus\Log.h">
+      <Filter>Proteus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Proteus_pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Proteus\Application.cpp">
+      <Filter>Proteus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Proteus\Log.cpp">
+      <Filter>Proteus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Proteus_pch.cpp" />
+  </ItemGroup>
+</Project>
