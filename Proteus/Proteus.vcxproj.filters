@@ -35,6 +35,10 @@
       <Filter>Proteus</Filter>
     </ClInclude>
     <ClInclude Include="src\Proteus_pch.h" />
+    <ClInclude Include="src\Proteus\Window.h">
+      <Filter>Proteus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Proteus\Application.cpp">
@@ -44,5 +48,6 @@
       <Filter>Proteus</Filter>
     </ClCompile>
     <ClCompile Include="src\Proteus_pch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

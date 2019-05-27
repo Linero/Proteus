@@ -8,6 +8,54 @@ workspace "Proteus"
 	}
 	
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+IncludeDir = {}
+IncludeDir["GLFW"] = "Proteus/vendor/GLFW/include"
+
+project "GLFW"
+    kind "StaticLib"
+    language "C"
+    
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	files
+	{
+        "Proteus/vendor/GLFW/include/GLFW/glfw3.h",
+        "Proteus/vendor/GLFW/include/GLFW/glfw3native.h",
+        "Proteus/vendor/GLFW/src/glfw_config.h",
+        "Proteus/vendor/GLFW/src/context.c",
+        "Proteus/vendor/GLFW/src/init.c",
+        "Proteus/vendor/GLFW/src/input.c",
+        "Proteus/vendor/GLFW/src/monitor.c",
+        "Proteus/vendor/GLFW/src/vulkan.c",
+        "Proteus/vendor/GLFW/src/window.c"
+    }
+    
+	filter "system:windows"
+        buildoptions { "-std=c11", "-lgdi32" }
+        systemversion "latest"
+        staticruntime "On"
+        
+        files
+        {
+            "Proteus/vendor/GLFW/src/win32_init.c",
+            "Proteus/vendor/GLFW/src/win32_joystick.c",
+            "Proteus/vendor/GLFW/src/win32_monitor.c",
+            "Proteus/vendor/GLFW/src/win32_time.c",
+            "Proteus/vendor/GLFW/src/win32_thread.c",
+            "Proteus/vendor/GLFW/src/win32_window.c",
+            "Proteus/vendor/GLFW/src/wgl_context.c",
+            "Proteus/vendor/GLFW/src/egl_context.c",
+            "Proteus/vendor/GLFW/src/osmesa_context.c"
+        }
+
+		defines 
+		{ 
+            "_GLFW_WIN32",
+            "_CRT_SECURE_NO_WARNINGS"
+		}
+    filter { "system:windows", "configurations:Release" }
+        buildoptions "/MT"
 
 project "Proteus"
 	location "Proteus"
@@ -28,7 +76,14 @@ project "Proteus"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{prj.name}/vendor/GLFW/include"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

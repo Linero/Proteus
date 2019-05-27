@@ -1,3 +1,6 @@
 [submodule "Proteus/vendor/spdlog"]
 	path = Proteus/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Proteus/vendor/GLFW"]
+	path = Proteus/vendor/GLFW
+	url = https://github.com/glfw/glfw
