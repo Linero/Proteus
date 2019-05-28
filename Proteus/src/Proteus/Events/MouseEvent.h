@@ -15,7 +15,7 @@ namespace Proteus {
 
 		std::string ToString() const override {
 			std::stringstream ss;
-			ss << "MouseMoveEvent: [" << GetX() << "," << GetY() << "]" << std::endl;
+			ss << "MouseMoveEvent: [" << GetX() << "," << GetY() << "]";
 			return ss.str();
 		}
 		EVENT_CLASS_TYPE(MouseMoved)
@@ -36,7 +36,7 @@ namespace Proteus {
 
 		std::string ToString() const override {
 			std::stringstream ss;
-			ss << "MouseScrollEvent: [" << GetOffsetX() << "," << GetOffsetY() << "]" << std::endl;
+			ss << "MouseScrollEvent: [" << GetOffsetX() << "," << GetOffsetY() << "]";
 			return ss.str();
 		}
 		EVENT_CLASS_TYPE(MouseScrolled)
@@ -51,7 +51,7 @@ namespace Proteus {
 
 		std::string ToString() const override {
 			std::stringstream ss;
-			ss << "MouseButtonEvent: [" << GetButton() << "]" << std::endl;
+			ss << "MouseButtonEvent: [" << GetButton() << "]";
 			return ss.str();
 		}
 
@@ -73,7 +73,7 @@ namespace Proteus {
 
 		std::string ToString() const override {
 			std::stringstream ss;
-			ss << "MouseButtonPressedEvent: [" << m_Buton << "]" << std::endl;
+			ss << "MouseButtonPressedEvent: [" << m_Buton << "]";
 			return ss.str();
 		}
 
@@ -89,7 +89,7 @@ namespace Proteus {
 
 		std::string ToString() const override {
 			std::stringstream ss;
-			ss << "MouseButtonReleasedEvent: [" << m_Buton << "]" << std::endl;
+			ss << "MouseButtonReleasedEvent: [" << m_Buton << "]";
 			return ss.str();
 		}
 

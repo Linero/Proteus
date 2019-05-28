@@ -26,7 +26,7 @@ namespace Proteus {
 		inline int GetRepeatCount() const { return m_RepeatCount; }
 		std::string ToString() const override {
 			std::stringstream ss;
-			ss << "KeyPressedEvent: " << m_KeyCode << " [" << m_RepeatCount << "x]" << std::endl;
+			ss << "KeyPressedEvent: " << m_KeyCode << " [" << m_RepeatCount << "x]";
 
 			return ss.str();
 		}
@@ -42,7 +42,7 @@ namespace Proteus {
 
 		std::string ToString() const override {
 			std::stringstream ss;
-			ss << "KeyReleasedEvent: " << m_KeyCode << std::endl;
+			ss << "KeyReleasedEvent: " << m_KeyCode;
 
 			return ss.str();
 		}
