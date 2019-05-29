@@ -57,6 +57,35 @@ project "GLFW"
     filter { "system:windows", "configurations:Release" }
         buildoptions "/MT"
 
+project "Glad"
+	kind "StaticLib"
+    language "C"
+    
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	files
+	{
+        "Proteus/vendor/Glad/include/glad/glad.h",
+        "Proteus/vendor/Glad/include/KHR/khrplatform.h",
+		"Proteus/vendor/Glad/src/glad.c"
+    }
+    
+	includedirs
+	{
+		"Proteus/vendor/Glad/include"
+	}
+
+	filter "system:windows"
+        systemversion "latest"
+        staticruntime "On"
+        
+    filter { "system:windows", "configurations:Release" }
+        buildoptions "/MT"
+
+
+
+
 project "Proteus"
 	location "Proteus"
 	kind "SharedLib"
@@ -77,12 +106,14 @@ project "Proteus"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/vendor/GLFW/include"
+		"%{prj.name}/vendor/GLFW/include",
+		"%{prj.name}/vendor/Glad/include",
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 

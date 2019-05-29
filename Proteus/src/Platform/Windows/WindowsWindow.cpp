@@ -1,9 +1,11 @@
 #include "Proteus_pch.h"
+#include "glad/glad.h"
 #include "WindowsWindow.h"
 #include "Proteus/Log.h"
 #include "Proteus/Events/ApplicationEvent.h"
 #include "Proteus/Events/KeyEvent.h"
 #include "Proteus/Events/MouseEvent.h"
+
 
 namespace Proteus {
 
@@ -35,6 +37,8 @@ namespace Proteus {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, props.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		PROTEUS_CORE_ASSERT(status, "Failed to initialize Glad!");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
