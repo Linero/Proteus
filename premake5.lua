@@ -12,6 +12,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Proteus/vendor/GLFW/include"
 
 project "GLFW"
+	location "Proteus/vendor"
     kind "StaticLib"
     language "C"
     
@@ -58,6 +59,7 @@ project "GLFW"
         buildoptions "/MT"
 
 project "Glad"
+	location "Proteus/vendor"
 	kind "StaticLib"
     language "C"
     
