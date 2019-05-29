@@ -105,14 +105,17 @@ project "Proteus"
 
 	filter "configurations:Debug"
 		defines "PROTEUS_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "PROTEUS_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "PROTEUS_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 
@@ -154,12 +157,15 @@ project "SandBox"
 
 	filter "configurations:Debug"
 		defines "PROTEUS_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "PROTEUS_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "PROTEUS_DIST"
+		buildoptions "/MD"
 		optimize "On"

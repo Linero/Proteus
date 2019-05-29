@@ -1,10 +1,11 @@
 #pragma once
 #include "Core.h"
 #include "Events/Event.h"
-#include "Proteus/Events/ApplicationEvent.h"
-#include "Proteus/Events/KeyEvent.h"
-#include "Proteus/Events/MouseEvent.h"
-#include "Proteus/Window.h"
+#include "Events/ApplicationEvent.h"
+#include "Events/KeyEvent.h"
+#include "Events/MouseEvent.h"
+#include "LayerStack.h"
+#include "Window.h"
 
 namespace Proteus {
 	class PROTEUS_API Application
@@ -19,10 +20,12 @@ namespace Proteus {
 		void Run();
 
 		void OnEvent(Event& e);
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* overlay);
 
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
-
+		LayerStack m_LayerStack;
 	};
 
 	// To be defined in client

@@ -5,6 +5,7 @@
 #include "Proteus/Application.h"
 #include "Proteus/Log.h"
 #include "Proteus/Window.h"
+#include "Proteus/Layer.h"
 
 
 //--------------Entry Point---------------------

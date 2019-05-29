@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Proteus">
       <UniqueIdentifier>{77AAF823-E389-77BF-ECA1-02965800DE20}</UniqueIdentifier>
     </Filter>
@@ -9,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Proteus.h" />
     <ClInclude Include="src\Proteus\Application.h">
       <Filter>Proteus</Filter>
@@ -31,23 +40,36 @@
     <ClInclude Include="src\Proteus\Events\MouseEvent.h">
       <Filter>Proteus\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Proteus\Layer.h">
+      <Filter>Proteus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Proteus\LayerStack.h">
+      <Filter>Proteus</Filter>
+    </ClInclude>
     <ClInclude Include="src\Proteus\Log.h">
       <Filter>Proteus</Filter>
     </ClInclude>
-    <ClInclude Include="src\Proteus_pch.h" />
     <ClInclude Include="src\Proteus\Window.h">
       <Filter>Proteus</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Proteus_pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Proteus\Application.cpp">
+      <Filter>Proteus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Proteus\Layer.cpp">
+      <Filter>Proteus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Proteus\LayerStack.cpp">
       <Filter>Proteus</Filter>
     </ClCompile>
     <ClCompile Include="src\Proteus\Log.cpp">
       <Filter>Proteus</Filter>
     </ClCompile>
     <ClCompile Include="src\Proteus_pch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
