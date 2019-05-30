@@ -85,7 +85,35 @@ project "Glad"
     filter { "system:windows", "configurations:Release" }
         buildoptions "/MT"
 
+project "ImGui"
+	location "Proteus/vendor"
+    kind "StaticLib"
+    language "C++"
+    
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	files
+	{
+        "Proteus/vendor/ImGui/imconfig.h",
+        "Proteus/vendor/ImGui/imgui.h",
+        "Proteus/vendor/ImGui/imgui.cpp",
+        "Proteus/vendor/ImGui/imgui_draw.cpp",
+        "Proteus/vendor/ImGui/imgui_internal.h",
+        "Proteus/vendor/ImGui/imgui_widgets.cpp",
+        "Proteus/vendor/ImGui/imstb_rectpack.h",
+        "Proteus/vendor/ImGui/imstb_textedit.h",
+        "Proteus/vendor/ImGui/imstb_truetype.h",
+        "Proteus/vendor/ImGui/imgui_demo.cpp"
+    }
+    
+	filter "system:windows"
+        systemversion "latest"
+        cppdialect "C++17"
+        staticruntime "On"
+        
+    filter { "system:windows", "configurations:Release" }
+        buildoptions "/MT"
 
 
 project "Proteus"
@@ -110,12 +138,14 @@ project "Proteus"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/vendor/GLFW/include",
 		"%{prj.name}/vendor/Glad/include",
+		"%{prj.name}/vendor/ImGui",
 	}
 
 	links
 	{
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 

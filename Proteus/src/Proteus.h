@@ -6,6 +6,7 @@
 #include "Proteus/Log.h"
 #include "Proteus/Window.h"
 #include "Proteus/Layer.h"
+#include "Proteus/ImGui/ImGuiLayer.h"
 
 
 //--------------Entry Point---------------------

@@ -53,6 +53,9 @@
       <Filter>Proteus</Filter>
     </ClInclude>
     <ClInclude Include="src\Proteus_pch.h" />
+    <ClInclude Include="src\Proteus\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3.h" />
+    <ClInclude Include="src\Platform\OpenGL\imgui_impl_glfw.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
@@ -71,5 +74,8 @@
       <Filter>Proteus</Filter>
     </ClCompile>
     <ClCompile Include="src\Proteus_pch.cpp" />
+    <ClCompile Include="src\Proteus\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\imgui_impl_glfw.cpp" />
   </ItemGroup>
 </Project>

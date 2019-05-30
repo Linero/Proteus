@@ -4,3 +4,6 @@
 [submodule "Proteus/vendor/GLFW"]
 	path = Proteus/vendor/GLFW
 	url = https://github.com/glfw/glfw
+[submodule "Proteus/vendor/ImGui"]
+	path = Proteus/vendor/ImGui
+	url = https://github.com/ocornut/imgui
