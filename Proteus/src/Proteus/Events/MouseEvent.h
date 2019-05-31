@@ -47,7 +47,7 @@ namespace Proteus {
 
 	public:
 
-		inline float GetButton() const { return m_Buton; }
+		inline int GetButton() const { return m_Buton; }
 
 		std::string ToString() const override {
 			std::stringstream ss;
