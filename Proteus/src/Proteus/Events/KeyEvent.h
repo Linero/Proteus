@@ -1,8 +1,6 @@
 #pragma once
 #include "Event.h"
 
-//#include <sstream>
-
 namespace Proteus {
 
 	class PROTEUS_API KeyEvent : public Event {

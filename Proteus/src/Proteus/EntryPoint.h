@@ -4,7 +4,7 @@
 
 extern Proteus::Application* Proteus::CreateApplication();
 
-int main(int argc, int** argv) {
+int main(int argc, char** argv) {
 
 	Proteus::Log::Init();
 	PROTEUS_CORE_WARN("Initialized core  Log!");

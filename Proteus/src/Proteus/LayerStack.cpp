@@ -1,39 +1,43 @@
 #include "Proteus_pch.h"
 #include "LayerStack.h"
 
-Proteus::LayerStack::LayerStack()
-{
-	m_LayerInsert = m_Layers.begin();
-}
+namespace Proteus {
 
-Proteus::LayerStack::~LayerStack()
-{
-	for (Layer* layer : m_Layers) delete layer;
-}
-
-void Proteus::LayerStack::PushLayer(Layer* layer)
-{
-	m_LayerInsert = m_Layers.emplace(m_LayerInsert, layer);
-}
-
-void Proteus::LayerStack::PushOverlay(Layer* overlay)
-{
-	m_Layers.emplace_back(overlay);
-}
-
-void Proteus::LayerStack::PopLayer(Layer* layer)
-{
-	auto it = std::find(m_Layers.begin(), m_Layers.end(), layer);
-	if (it != m_Layers.end())
+	LayerStack::LayerStack()
 	{
-		m_Layers.erase(it);
-		m_LayerInsert--;
+		m_LayerInsert = m_Layers.begin();
 	}
-	
-}
 
-void Proteus::LayerStack::PopOverlay(Layer* overlay)
-{
-	auto it = std::find(m_Layers.begin(), m_Layers.end(), overlay);
-	if (it != m_Layers.end()) m_Layers.erase(it);
+	LayerStack::~LayerStack()
+	{
+		for (Layer* layer : m_Layers) delete layer;
+	}
+
+	void LayerStack::PushLayer(Layer* layer)
+	{
+		m_LayerInsert = m_Layers.emplace(m_LayerInsert, layer);
+	}
+
+	void LayerStack::PushOverlay(Layer* overlay)
+	{
+		m_Layers.emplace_back(overlay);
+	}
+
+	void LayerStack::PopLayer(Layer* layer)
+	{
+		auto it = std::find(m_Layers.begin(), m_Layers.end(), layer);
+		if (it != m_Layers.end())
+		{
+			m_Layers.erase(it);
+			m_LayerInsert--;
+		}
+
+	}
+
+	void LayerStack::PopOverlay(Layer* overlay)
+	{
+		auto it = std::find(m_Layers.begin(), m_Layers.end(), overlay);
+		if (it != m_Layers.end()) m_Layers.erase(it);
+	}
+
 }

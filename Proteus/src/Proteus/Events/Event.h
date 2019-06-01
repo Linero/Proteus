@@ -1,8 +1,6 @@
 #pragma once
+#include "Proteus_pch.h"
 #include "Proteus/Core.h"
-
-//#include <string>
-//#include <functional>
 
 namespace Proteus {
 

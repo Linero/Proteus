@@ -4,6 +4,9 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
@@ -12,6 +15,9 @@
     </Filter>
     <Filter Include="Proteus\Events">
       <UniqueIdentifier>{7B0A6552-67D8-5858-506C-C97E3CD934BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Proteus\ImGui">
+      <UniqueIdentifier>{E1DCAAA5-4D9D-26DC-16D8-6F5982576BB8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -40,6 +46,9 @@
     <ClInclude Include="src\Proteus\Events\MouseEvent.h">
       <Filter>Proteus\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Proteus\ImGui\ImGuiLayer.h">
+      <Filter>Proteus\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Proteus\Layer.h">
       <Filter>Proteus</Filter>
     </ClInclude>
@@ -53,9 +62,9 @@
       <Filter>Proteus</Filter>
     </ClInclude>
     <ClInclude Include="src\Proteus_pch.h" />
-    <ClInclude Include="src\Proteus\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3.h" />
-    <ClInclude Include="src\Platform\OpenGL\imgui_impl_glfw.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
@@ -63,6 +72,9 @@
     </ClCompile>
     <ClCompile Include="src\Proteus\Application.cpp">
       <Filter>Proteus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Proteus\ImGui\ImGuiLayer.cpp">
+      <Filter>Proteus\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Proteus\Layer.cpp">
       <Filter>Proteus</Filter>
@@ -74,8 +86,8 @@
       <Filter>Proteus</Filter>
     </ClCompile>
     <ClCompile Include="src\Proteus_pch.cpp" />
-    <ClCompile Include="src\Proteus\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\imgui_impl_opengl3.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\imgui_impl_glfw.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

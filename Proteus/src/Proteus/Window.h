@@ -1,4 +1,5 @@
 #pragma once
+#include "Proteus_pch.h"
 #include "Core.h"
 #include "Events/Event.h"
 

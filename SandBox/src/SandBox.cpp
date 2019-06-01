@@ -1,4 +1,3 @@
-#include "Proteus_pch.h"
 #include <Proteus.h>
 
 class ExampleLayer : public Proteus::Layer {

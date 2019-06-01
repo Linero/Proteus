@@ -1,11 +1,9 @@
 #pragma once
 #include "Core.h"
+#include "Window.h"
+#include "LayerStack.h"
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
-#include "Events/KeyEvent.h"
-#include "Events/MouseEvent.h"
-#include "LayerStack.h"
-#include "Window.h"
 
 namespace Proteus {
 	class PROTEUS_API Application

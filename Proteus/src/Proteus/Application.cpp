@@ -2,7 +2,7 @@
 #include "Application.h"
 #include "Proteus/Log.h"
 #include "glad/glad.h"
-#include "GLFW/glfw3.h"
+
 
 
 namespace Proteus {
@@ -27,8 +27,8 @@ namespace Proteus {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		PROTEUS_TRACE(e);
+		//WindowResizeEvent e(1280, 720);
+		//PROTEUS_TRACE(e);
 		while (m_Running) {
 			glClearColor(1, 0, 1, 1);
 			glClear(GL_COLOR_BUFFER_BIT);

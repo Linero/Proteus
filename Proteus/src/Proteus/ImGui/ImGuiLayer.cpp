@@ -1,11 +1,12 @@
 #include "Proteus_pch.h"
-#include "Proteus/Application.h"
-#include "imgui.h"
-#include "Platform/OpenGL/imgui_impl_glfw.h"
-#include "Platform/OpenGL/imgui_impl_opengl3.h"
 #include "ImGuiLayer.h"
-#include "glad/glad.h"
+#include "imgui.h"
+#include "Platform/OpenGL/ImGuiOpenGLRenderer.h"
+#include "Proteus/Application.h"
+
 #include "GLFW/glfw3.h"
+#include "glad/glad.h"
+
 
 
 namespace Proteus {
@@ -26,9 +27,7 @@ namespace Proteus {
 
 	void ImGuiLayer::OnAttach()
 	{
-		const char* glsl_version = "#version 130";
-		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
+		const char* glsl_version = "#version 410";
 
 		ImGui::CreateContext();
 		ImGuiIO& io = ImGui::GetIO();
@@ -143,8 +142,8 @@ namespace Proteus {
 		io.KeysDown[e.GetKeyCode()] = true;
 		io.KeyCtrl = io.KeysDown[GLFW_KEY_LEFT_CONTROL] || io.KeysDown[GLFW_KEY_RIGHT_CONTROL];
 		io.KeyAlt = io.KeysDown[GLFW_KEY_LEFT_ALT] || io.KeysDown[GLFW_KEY_RIGHT_ALT];
-		io.KeyShift = io.KeysDown[GLFW_KEY_LEFT_SHIFT] || io.KeysDown[GLFW_KEY_LEFT_SHIFT];
-		io.KeySuper = io.KeysDown[GLFW_KEY_LEFT_SUPER] || io.KeysDown[GLFW_KEY_LEFT_SUPER];
+		io.KeyShift = io.KeysDown[GLFW_KEY_LEFT_SHIFT] || io.KeysDown[GLFW_KEY_RIGHT_SHIFT];
+		io.KeySuper = io.KeysDown[GLFW_KEY_LEFT_SUPER] || io.KeysDown[GLFW_KEY_RIGHT_SUPER];
 
 			return false;
 	}

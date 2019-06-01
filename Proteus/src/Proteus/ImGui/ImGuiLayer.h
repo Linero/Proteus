@@ -1,19 +1,22 @@
 #pragma once
 
 #include "Proteus/Layer.h"
+#include "Proteus/Events/ApplicationEvent.h"
+#include "Proteus/Events/KeyEvent.h"
+#include "Proteus/Events/MouseEvent.h"
 
 namespace Proteus {
 
 	class PROTEUS_API ImGuiLayer : public Layer {
-		float m_Time;
+		float m_Time = 0.0f;
 	public:
 		ImGuiLayer();
 		~ImGuiLayer();
 
-		void OnAttach() override;
-		void OnDetach() override;
-		void OnUpdate() override;
-		void OnEvent(Event& event) override;
+		void OnAttach();
+		void OnDetach();
+		void OnUpdate();
+		void OnEvent(Event& event);
 
 	private:
 		bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);
