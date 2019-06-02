@@ -13,10 +13,10 @@ namespace Proteus {
 		ImGuiLayer();
 		~ImGuiLayer();
 
-		void OnAttach();
-		void OnDetach();
-		void OnUpdate();
-		void OnEvent(Event& event);
+		void OnAttach() override;
+		void OnDetach() override;
+		void OnUpdate() override;
+		void OnEvent(Event& event) override;
 
 	private:
 		bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);

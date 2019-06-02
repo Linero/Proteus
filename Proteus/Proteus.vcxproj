@@ -150,6 +150,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Proteus.h" />
     <ClInclude Include="src\Proteus\Application.h" />
@@ -160,6 +161,7 @@
     <ClInclude Include="src\Proteus\Events\KeyEvent.h" />
     <ClInclude Include="src\Proteus\Events\MouseEvent.h" />
     <ClInclude Include="src\Proteus\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Proteus\Input.h" />
     <ClInclude Include="src\Proteus\Layer.h" />
     <ClInclude Include="src\Proteus\LayerStack.h" />
     <ClInclude Include="src\Proteus\Log.h" />
@@ -168,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Proteus\Application.cpp" />
     <ClCompile Include="src\Proteus\ImGui\ImGuiLayer.cpp" />
