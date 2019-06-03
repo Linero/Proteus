@@ -34,11 +34,11 @@ namespace Proteus {
 			
 			for (Layer* layer : m_LayerStack) layer->OnUpdate();
 
-			auto [x, y] = Input::GetMousePos();
-			PROTEUS_CORE_TRACE("{0},{1}", x, y);
+			//auto [x, y] = Input::GetMousePos();
+			//PROTEUS_CORE_TRACE("{0},{1}", x, y);
 
-			PROTEUS_CORE_TRACE("{0}", Input::IsKeyPressed(65)); // trace key: a
-			PROTEUS_CORE_TRACE("{0}", Input::IsMouseButtonPressed(0)); // trace: left mouse button
+			//PROTEUS_CORE_TRACE("{0}", Input::IsKeyPressed(65)); // trace key: a
+			//PROTEUS_CORE_TRACE("{0}", Input::IsMouseButtonPressed(0)); // trace: left mouse button
 
 			m_Window->OnUpdate();
 		}

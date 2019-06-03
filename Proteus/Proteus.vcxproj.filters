@@ -67,6 +67,8 @@
     </ClInclude>
     <ClInclude Include="src\Proteus\Input.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Proteus\KeyCodes.h" />
+    <ClInclude Include="src\Proteus\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">

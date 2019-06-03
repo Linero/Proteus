@@ -7,11 +7,17 @@ public:
 		:Layer("Example") {}
 
 	void OnUpdate() override {
-		PROTEUS_INFO("ExampleLayer::Update");
+		//PROTEUS_INFO("ExampleLayer::Update");
+		if (Proteus::Input::IsKeyPressed(PROTEUS_KEY_A)) PROTEUS_TRACE("Key A pressed [poll]");
 	}
 
 	void OnEvent(Proteus::Event& event) override {
-		PROTEUS_TRACE("{0}", event);
+		//PROTEUS_TRACE("{0}", event);
+		if (event.GetEventType() == Proteus::EventType::KeyPressed) {
+			Proteus::KeyPressedEvent& e = (Proteus::KeyPressedEvent&)event;
+			if (Proteus::Input::IsKeyPressed(PROTEUS_KEY_A)) PROTEUS_TRACE("Key A pressed [event]");
+			PROTEUS_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 
 };

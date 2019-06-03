@@ -162,9 +162,11 @@
     <ClInclude Include="src\Proteus\Events\MouseEvent.h" />
     <ClInclude Include="src\Proteus\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Proteus\Input.h" />
+    <ClInclude Include="src\Proteus\KeyCodes.h" />
     <ClInclude Include="src\Proteus\Layer.h" />
     <ClInclude Include="src\Proteus\LayerStack.h" />
     <ClInclude Include="src\Proteus\Log.h" />
+    <ClInclude Include="src\Proteus\MouseButtonCodes.h" />
     <ClInclude Include="src\Proteus\Window.h" />
     <ClInclude Include="src\Proteus_pch.h" />
   </ItemGroup>
