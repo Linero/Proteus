@@ -7,3 +7,6 @@
 [submodule "Proteus/vendor/ImGui"]
 	path = Proteus/vendor/ImGui
 	url = https://github.com/ocornut/imgui
+[submodule "Proteus/vendor/glm"]
+	path = Proteus/vendor/glm
+	url = https://github.com/g-truc/glm

@@ -131,7 +131,9 @@ project "Proteus"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -141,6 +143,7 @@ project "Proteus"
 		"%{prj.name}/vendor/GLFW/include",
 		"%{prj.name}/vendor/Glad/include",
 		"%{prj.name}/vendor/ImGui",
+		"%{prj.name}/vendor/glm"
 	}
 
 	links
@@ -196,13 +199,14 @@ project "SandBox"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
 	}
 
 	includedirs
 	{
 		"Proteus/vendor/spdlog/include",
-		"Proteus/src"
+		"Proteus/src",
+		"Proteus/vendor/glm"
 	}
 
 	links
