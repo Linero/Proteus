@@ -4,6 +4,7 @@
 #include "LayerStack.h"
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
+#include "ImGui/ImGuiLayer.h"
 
 namespace Proteus {
 	class PROTEUS_API Application
@@ -26,6 +27,7 @@ namespace Proteus {
 		bool OnWindowClose(WindowCloseEvent& e);
 		LayerStack m_LayerStack;
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		static Application* s_Instance;
 	};

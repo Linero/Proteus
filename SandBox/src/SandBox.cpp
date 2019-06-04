@@ -49,7 +49,6 @@ public:
 
 	SandBox() {
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Proteus::ImGuiLayer());
 	}
 	~SandBox() {
 		
